@@ -34,3 +34,5 @@ res.send('<h1>Servidor de la Práctica 2: Universo Experimental Alterno 🧪</h1
 app.listen(PORT, () => {
     console.log(`🚀 Servidor experimental corriendo con éxito en: http://localhost:${PORT}`);
 });
+
+// Cambio realizado desde la nube para probar el git pull ☁️
