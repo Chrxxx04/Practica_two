@@ -28,7 +28,7 @@ app.get('/api/prueba', (req, res) => {
 
 // Ruta nueva para probar el Merge más adelante
 app.get('/merge-exitoso', (req, res) => {
-    res.send('<h1>¡El merge funcionó a la perfección! 🤝</h1>');
+res.send('<h1>Servidor de la Práctica 2: Universo Experimental Alterno 🧪</h1>');
 });
 
 app.listen(PORT, () => {
