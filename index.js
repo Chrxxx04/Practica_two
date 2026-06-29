@@ -1,19 +1,30 @@
-// 1. Importamos las librerías necesarias
+//MI NUEVO INDEX DE LA RAMA MIS_EXPERIMENTOS 
 const express = require('express');
-require('dotenv').config(); // Esto permite leer el archivo .env
-
-// 2. Inicializamos la aplicación de Express
 const app = express();
+require('dotenv').config();
 
-// 3. Traemos el puerto desde nuestro archivo .env (y si no existe, usa el 4000 por defecto)
 const PORT = process.env.PORT || 4000;
 
-// 4. Creamos una ruta de prueba para verificar que funcione
-app.get('/', (req, res) => {
-    res.send('<h1>¡Servidor de la Práctica 2 funcionando de forma manual! 💻🔥</h1>');
+// Middleware experimental para registrar peticiones en la consola
+app.use((req, res, next) => {
+    console.log(`[${new Date().toLocaleString()}] Petición recibida: ${req.method} en ${req.url}`);
+    next();
 });
 
-// 5. Ponemos al servidor a escuchar las peticiones
+// Ruta principal del experimento
+app.get('/', (req, res) => {
+    res.send('<h1>¡Hola desde el universo paralelo de la rama Experimentos! 🚀</h1><p>Servidor corriendo con Express de forma fluida.</p>');
+});
+
+// Nueva ruta de prueba para simular datos de una API
+app.get('/api/prueba', (req, res) => {
+    res.json({
+        status: "success",
+        message: "Datos cargados desde la rama de pruebas",
+        backendStudent: true
+    });
+});
+
 app.listen(PORT, () => {
-    console.log(`Servidor manual corriendo con éxito en: http://localhost:${PORT}`);
+    console.log(`🚀 Servidor experimental corriendo con éxito en: http://localhost:${PORT}`);
 });
