@@ -1,0 +1,13 @@
+{
+  "name": "practica_dos",
+  "version": "1.0.0",
+  "description": "Mi segundo servidor backend creado de forma manual",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
